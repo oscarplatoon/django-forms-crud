@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src='script.js' async defer></script>
+</head>
+<body>
+    <nav id='body-nav'>
+
+    </nav>
+    <main id='body-main'>
+        <h1>Book Details</h1>
+        <h2>Title: {{ book.title }}</h2>
+        <h3>Author: {{ book.author }} </h3>
+        <p>Pages: {{ book.pages }}</p>
+        <hr/>
+        <a href="{% url 'books:book_list' %}">Back</a>
+    </main>
+    <footer id='body-footer'>
+
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src='script.js' async defer></script>
+</head>
+<body>
+    <nav id='body-nav'>
+
+    </nav>
+    <main id='body-main'>
+        <h1>Books</h1>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Pages</th>
+              <th>Fiction?</th>
+              <th>View</th>
+              <th>Edit</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for book in all_books %}
+              <tr>
+                <td>{{ book.title }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.pages }}</td>
+                <td>{{ book.fiction_or_non }}</td>
+                <td><a href="{% url 'books:book_view' book.id %}">view</a></td>
+                <td><a href="{% url 'books:book_edit' book.id %}">edit</a></td>
+                <td><a href="{% url 'books:book_delete' book.id %}">delete</a></td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        
+        <a href="{% url 'books:book_new' %}">New</a>
+    </main>
+    <footer id='body-footer'>
+
+    </footer>
+</body>
+</html>

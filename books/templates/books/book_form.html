@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src='script.js' async defer></script>
+</head>
+<body>
+    <nav id='body-nav'>
+
+    </nav>
+    <main id='body-main'>
+        <!-- <h1>Book Form: {{ new_or_edit }}</h1>
+        <form method="post">{% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" value="Submit" />
+        </form> -->
+
+        <h1>Book Form: {{ new_or_edit }}</h1>
+        <form method="post">
+            {% csrf_token %}
+            <table>
+                {{ form.as_table }}
+            </table>
+            
+
+
+            <!-- {% if book %}
+            <label>Title:</label>
+            <input type="text" name="title" placeholder="title" value="{{ book.title }}"/>
+            <br />
+            <label>Author:</label>
+            <input type="text" name="author" placeholder="author" value="{{ book.author }}"/>
+            <br />
+            <label>Pages:</label>
+            <input type="text" name="pages" placeholder="pages" value="{{ book.pages }}"/>
+            <br />
+            {% else %}
+            <label>Title:</label>
+            <input type="text" name="title" placeholder="title"/>
+            <br />
+            <label>Author:</label>
+            <input type="text" name="author" placeholder="author"/>
+            <br />
+            <label>Pages:</label>
+            <input type="text" name="pages" placeholder="pages"/>
+            <br />
+            {% endif %} -->
+            <input type="submit" value="Submit" />
+        </form>
+
+    </main>
+    <footer id='body-footer'>
+
+    </footer>
+</body>
+</html>

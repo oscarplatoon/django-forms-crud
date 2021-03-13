@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My HTML Page</title>
+    <link rel='stylesheet' type='text/css' href='style.css'>
+    <script src='script.js' async defer></script>
+</head>
+<body>
+    <nav id='body-nav'>
+
+    </nav>
+    <main id='body-main'>
+        <h1>Book Delete</h1>
+        <form method="post">
+            {% csrf_token %}
+            Are you sure you want to delete "{{ object.title }}" ?
+            <input type="submit" value="Submit" />
+        </form>
+    </main>
+    <footer id='body-footer'>
+
+    </footer>
+</body>
+</html>
